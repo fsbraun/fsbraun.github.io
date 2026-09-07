@@ -1,0 +1,20 @@
+title: Fabian Braun
+description: Systems for making better decisions — in investing, software, and content architecture.
+url: ""
+baseurl: ""
+lang: en
+timezone: Europe/Berlin
+
+permalink: /writing/:title/
+markdown: kramdown
+
+author:
+  name: Fabian Braun
+  github: fsbraun
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+

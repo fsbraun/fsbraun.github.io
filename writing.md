@@ -12,7 +12,7 @@ permalink: /writing/
       <p class="eyebrow">Writing</p>
       <h1>Thinking in public.</h1>
     </div>
-    <p class="lede">Essays and notes organized around ideas rather than publication dates. The first pieces are in development; this page is the map they will grow into.</p>
+    <p class="lede">Essays and notes organized around ideas rather than publication dates. Published work sits alongside questions and pieces still in development.</p>
   </div>
 </header>
 
@@ -40,17 +40,17 @@ permalink: /writing/
     <article class="idea">
       <h3>The CMS Is Not the Application</h3>
       <p>Where the boundary between application and content system belongs.</p>
-      <span class="status">Forthcoming</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">Read on django-cms.org&nbsp; ↗</a>
     </article>
     <article class="idea">
       <h3>Make Your Django Application Editable</h3>
       <p>Adding editorial capabilities without surrendering application architecture.</p>
-      <span class="status">Forthcoming</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Read on django-cms.org&nbsp; ↗</a>
     </article>
     <article class="idea">
       <h3>Plugin Architecture Is Editor Experience</h3>
       <p>How technical component architecture becomes product design.</p>
-      <span class="status">Forthcoming</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/09/07/plugin-architecture-is-editor-experience/">Read on django-cms.org&nbsp; ↗</a>
     </article>
     <article class="idea">
       <h3>Headless Is an Architecture, Not a Product Strategy</h3>

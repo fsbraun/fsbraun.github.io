@@ -611,7 +611,7 @@ h3 {
 
 .article-header h1 {
   color: var(--navy);
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(3rem, 5vw, 5rem);
 }
 
 .article-header .lede {

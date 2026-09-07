@@ -1,0 +1,10 @@
+{% assign category_posts = site.categories[include.category] %}
+{% for post in category_posts %}
+<article class="idea idea-published">
+  <p class="idea-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.reading_time %} · {{ post.reading_time }} min read{% endif %}</p>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  <a class="text-link" href="{{ post.url | relative_url }}">Read the essay&nbsp; →</a>
+</article>
+{% endfor %}
+

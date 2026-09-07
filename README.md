@@ -37,14 +37,15 @@ layout: post
 title: The CMS Is Not the Application
 description: Where the boundary between application and content system belongs.
 reading_time: 8
+category: content-systems
 ---
 
 Essay text starts here.
 ```
 
-Then replace the matching “Forthcoming” entry in `writing.md` and `index.md` with a link to the generated article URL.
+The post is added automatically to its category on the Writing page. Supported category values are `content-systems`, `software-reuse`, `automation-ai`, and `decision-systems`.
 
-Published posts are listed automatically at the top of the Writing page through Jekyll’s `site.posts` collection. The date in the filename controls publication: a future-dated file stays hidden until that date. The idea-based sections below the list remain manually curated.
+The date in the filename controls publication: a future-dated file stays hidden until that date. External articles and planned ideas remain curated directly in `writing.md`.
 
 ## Preview locally (optional)
 

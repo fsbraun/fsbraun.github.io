@@ -16,27 +16,10 @@ permalink: /writing/
   </div>
 </header>
 
-{% if site.posts.size > 0 %}
-<section class="category-section published-writing">
-  <h2>Published</h2>
-  <div class="post-list">
-    {% for post in site.posts %}
-    <a class="post-list-item" href="{{ post.url | relative_url }}">
-      <div>
-        <p class="eyebrow">{{ post.date | date: "%B %-d, %Y" }}</p>
-        <h3>{{ post.title }}</h3>
-        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-      </div>
-      <span aria-hidden="true">Read&nbsp; →</span>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
 <section class="category-section">
   <h2>Content systems<br>&amp; architecture</h2>
   <div class="idea-list">
+    {% include category-posts.html category="content-systems" %}
     <article class="idea">
       <h3><a href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">The CMS Is Not the Application</a></h3>
       <p>Where the boundary between application and content system belongs.</p>
@@ -63,17 +46,21 @@ permalink: /writing/
 <section class="category-section">
   <h2>Software, reuse<br>&amp; organizations</h2>
   <div class="idea-list">
+    {% include category-posts.html category="software-reuse" %}
+    {% unless site.categories["software-reuse"] %}
     <article class="idea">
       <h3>Stop Rebuilding the Same Django App for Every Client</h3>
       <p>What reusable applications demand from architecture, teams, and product thinking.</p>
       <span class="status">On the horizon</span>
     </article>
+    {% endunless %}
   </div>
 </section>
 
 <section class="category-section">
   <h2>Automation<br>&amp; AI</h2>
   <div class="idea-list">
+    {% include category-posts.html category="automation-ai" %}
     <article class="idea">
       <h3>I Don’t Want an AI Button in My CMS</h3>
       <p>Why useful automation belongs in workflows and capabilities, not novelty controls.</p>
@@ -90,6 +77,7 @@ permalink: /writing/
 <section class="category-section">
   <h2>Investing<br>&amp; decision systems</h2>
   <div class="idea-list">
+    {% include category-posts.html category="decision-systems" %}
     <article class="idea">
       <h3>A.IX Insights</h3>
       <p>Writing on systematic investing, risk, and repeatable investment decisions lives at A.IX Capital.</p>

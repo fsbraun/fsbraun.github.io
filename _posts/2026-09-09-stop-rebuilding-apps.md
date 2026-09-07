@@ -3,6 +3,7 @@ layout: post
 title: Stop Rebuilding the Same Django App for Every Client
 description: How reusable Django applications can turn agency project work into accumulating product knowledge.
 reading_time: 8
+category: software-reuse
 ---
 Agencies build different websites for different clients, but they don't always build different applications. One corporate website needs people, another needs locations, another needs events. Others need services, jobs, case studies, publications, or projects.
 

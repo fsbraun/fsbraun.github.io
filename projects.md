@@ -76,10 +76,16 @@ permalink: /projects/
       <h2>Projects I maintain</h2>
     </div>
     <div>
-      <p>Foundational Django packages for structured rich text and multilingual content.</p>
+      <p>Core packages for multilingual content, editorial workflows, and reusable content components.</p>
       <div class="other-projects">
-        <a href="https://github.com/django-cms/djangocms-text">djangocms-text&nbsp; ↗</a>
-        <a href="https://github.com/django-parler/django-parler">django-parler&nbsp; ↗</a>
+        <a href="https://github.com/django-cms/djangocms-versioning">djangocms-versioning</a>
+        <a href="https://github.com/django-cms/djangocms-moderation">djangocms-moderation</a>
+        <a href="https://github.com/django-cms/djangocms-text">djangocms-text</a>
+        <a href="https://github.com/django-cms/djangocms-link">djangocms-link</a>
+        <a href="https://github.com/django-cms/djangocms-picture">djangocms-picture</a>
+        <a href="https://github.com/fsbraun/djangocms-markdown">djangocms-markdown</a>
+        <a href="https://github.com/fsbraun/djangocms-katex">djangocms-katex</a>
+        <a href="https://github.com/django-parler/django-parler">django-parler</a>
       </div>
     </div>
   </div>

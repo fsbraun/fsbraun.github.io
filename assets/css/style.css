@@ -594,10 +594,38 @@ h3 {
 }
 
 .other-projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
   margin-top: 2rem;
+}
+
+.other-projects a {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 680;
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.other-projects a::after {
+  content: "↗";
+  flex: 0 0 auto;
+  color: var(--accent);
+}
+
+.other-projects a:hover {
+  border-color: #9ebce0;
+  color: var(--accent-strong);
+  transform: translateY(-2px);
 }
 
 .about-header {
@@ -865,6 +893,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .other-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .writing-item-featured {
     grid-column: 1 / -1;
     min-height: 300px;
@@ -982,5 +1014,15 @@ h3 {
 
   .writing-item {
     transition: none;
+  }
+
+  .other-projects a {
+    transition: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .other-projects {
+    grid-template-columns: 1fr;
   }
 }

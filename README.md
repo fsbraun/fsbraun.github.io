@@ -44,6 +44,8 @@ Essay text starts here.
 
 Then replace the matching “Forthcoming” entry in `writing.md` and `index.md` with a link to the generated article URL.
 
+Published posts are listed automatically at the top of the Writing page through Jekyll’s `site.posts` collection. The date in the filename controls publication: a future-dated file stays hidden until that date. The idea-based sections below the list remain manually curated.
+
 ## Preview locally (optional)
 
 With Ruby and Bundler installed:
@@ -58,4 +60,3 @@ Open `http://127.0.0.1:4000`. A local preview is optional; GitHub Pages builds t
 ## Custom domain (optional)
 
 Add the domain in **Settings → Pages → Custom domain**, verify it in your GitHub account, and follow GitHub’s DNS instructions. GitHub recommends configuring a `www` subdomain alongside an apex domain.
-

@@ -43,6 +43,22 @@ permalink: /projects/
         <a class="text-link" href="https://github.com/fsbraun/djangocms-custom-content">GitHub&nbsp; ↗</a>
       </div>
     </article>
+    <article class="project-card">
+      <p class="eyebrow">Composable publishing</p>
+      <h2>djangocms-stories</h2>
+      <p>A lean foundation for multilingual storytelling that combines django CMS placeholders with specialized applications for workflows such as versioning and moderation.</p>
+      <div class="project-links">
+        <a class="text-link" href="https://github.com/django-cms/djangocms-stories">GitHub&nbsp; ↗</a>
+      </div>
+    </article>
+    <article class="project-card">
+      <p class="eyebrow">Reusable interaction</p>
+      <h2>djangocms-form-builder</h2>
+      <p>Treating forms as reusable content objects: editors compose them with familiar components while applications retain control of validation, actions, and business logic.</p>
+      <div class="project-links">
+        <a class="text-link" href="https://github.com/django-cms/djangocms-form-builder">GitHub&nbsp; ↗</a>
+      </div>
+    </article>
     <article class="project-card experimental">
       <h2>djangocms-automation</h2>
       <p>Exploring how workflows, automation, and AI agents can become composable application capabilities.</p>
@@ -57,16 +73,14 @@ permalink: /projects/
   <div class="section-heading">
     <div>
       <p class="eyebrow">Also maintained</p>
-      <h2>Other django CMS projects</h2>
+      <h2>Projects I maintain</h2>
     </div>
     <div>
-      <p>Focused packages for structured stories, rich text, and editor-built forms.</p>
+      <p>Foundational Django packages for structured rich text and multilingual content.</p>
       <div class="other-projects">
-        <a href="https://github.com/django-cms/djangocms-stories">djangocms-stories&nbsp; ↗</a>
         <a href="https://github.com/django-cms/djangocms-text">djangocms-text&nbsp; ↗</a>
-        <a href="https://github.com/django-cms/djangocms-form-builder">djangocms-form-builder&nbsp; ↗</a>
+        <a href="https://github.com/django-parler/django-parler">django-parler&nbsp; ↗</a>
       </div>
     </div>
   </div>
 </section>
-

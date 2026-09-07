@@ -40,19 +40,19 @@ description: Fabian Braun builds systems for making better decisions in systemat
   </div>
   <div class="writing-list">
     <article class="writing-item">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">The CMS Is Not the Application</a></h3>
+      <h3>The CMS Is Not the Application</h3>
       <p>Where the boundary between application and content system belongs.</p>
-      <span class="status">Appeared on django-cms.org</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">Read on django-cms.org&nbsp; ↗</a>
     </article>
     <article class="writing-item">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/09/07/plugin-architecture-is-editor-experience/">Plugin Architecture Is Editor Experience</a></h3>
+      <h3>Plugin Architecture Is Editor Experience</h3>
       <p>How technical component architecture becomes product design.</p>
-      <span class="status">Appeared on django-cms.org</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/09/07/plugin-architecture-is-editor-experience/">Read on django-cms.org&nbsp; ↗</a>
     </article>
     <article class="writing-item">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Make Your Django Application Editable</a></h3>
+      <h3>Make Your Django Application Editable</h3>
       <p>Adding editorial capabilities without surrendering application architecture.</p>
-      <span class="status">Appeared on django-cms.org</span>
+      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Read on django-cms.org&nbsp; ↗</a>
     </article>
   </div>
   <a class="text-link" href="{{ '/writing/' | relative_url }}">All writing&nbsp; →</a>

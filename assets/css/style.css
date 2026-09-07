@@ -389,6 +389,55 @@ h3 {
   color: var(--muted);
 }
 
+.post-list {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.post-list-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.post-list-item:last-child {
+  border-bottom: 0;
+}
+
+.post-list-item:hover {
+  background: var(--accent-soft);
+}
+
+.post-list-item h3 {
+  margin-bottom: 0.55rem;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+}
+
+.post-list-item p {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.post-list-item .eyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--accent);
+}
+
+.post-list-item > span {
+  color: var(--accent-strong);
+  font-size: 0.86rem;
+  font-weight: 680;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -668,6 +717,11 @@ h3 {
   .writing-item {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+  }
+
+  .post-list-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .identity-card,

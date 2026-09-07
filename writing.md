@@ -16,6 +16,24 @@ permalink: /writing/
   </div>
 </header>
 
+{% if site.posts.size > 0 %}
+<section class="category-section published-writing">
+  <h2>Published</h2>
+  <div class="post-list">
+    {% for post in site.posts %}
+    <a class="post-list-item" href="{{ post.url | relative_url }}">
+      <div>
+        <p class="eyebrow">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h3>{{ post.title }}</h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </div>
+      <span aria-hidden="true">Read&nbsp; →</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section class="category-section">
   <h2>Content systems<br>&amp; architecture</h2>
   <div class="idea-list">
@@ -79,4 +97,3 @@ permalink: /writing/
     </article>
   </div>
 </section>
-

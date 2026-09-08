@@ -5,8 +5,6 @@ description: On staying close to automation, retaining digital sovereignty, and 
 reading_time: 5
 category: software-reuse
 ---
-#
-
 I have been writing software for a long time, long enough to see technologies arrive with great enthusiasm and disappear again, and long enough to see systems outlive the assumptions under which they were built.
 
 I still write code.

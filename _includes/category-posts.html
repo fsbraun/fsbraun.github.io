@@ -1,4 +1,6 @@
 {% assign category_posts = site.categories[include.category] %}
+{% if category_posts %}
+{% assign category_posts = category_posts | sort: "date" | reverse %}
 {% for post in category_posts %}
 {% if post.external_url %}
 <article class="idea">
@@ -15,3 +17,4 @@
 </article>
 {% endif %}
 {% endfor %}
+{% endif %}

@@ -85,6 +85,8 @@ permalink: /projects/
         <a href="https://github.com/django-cms/djangocms-picture">djangocms-picture</a>
         <a href="https://github.com/fsbraun/djangocms-markdown">djangocms-markdown</a>
         <a href="https://github.com/fsbraun/djangocms-katex">djangocms-katex</a>
+        <a href="https://github.com/fsbraun/djangocms-simple-admin-style">djangocms-simple-admin-style</a>
+        <a href="https://github.com/fsbraun/djangocms-timed-publishing">djangocms-timed-publishing</a>
         <a href="https://github.com/django-parler/django-parler">django-parler</a>
       </div>
     </div>

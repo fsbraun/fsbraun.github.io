@@ -2,129 +2,171 @@
 layout: post
 title: Why I Still Write Code
 description: Why writing code still matters to me when building automation and systems meant to last.
-reading_time: 5
+reading_time: 10
 category: software-reuse
 ---
-I have been writing software for a long time, long enough to see technologies arrive with great enthusiasm and disappear again, and long enough to see systems outlive the assumptions under which they were built.
+I have been writing software for a long time, and my role has changed considerably along the way. I spend more time today thinking about architecture, product direction, automation, and the long-term consequences of technical decisions than about implementing individual features.
 
-I still write code.
+And yet, I still write code.
 
-Not because writing code itself is the goal. Much of what I care about is actually the opposite: automation, making machines do work so humans don't have to. But I have found that staying close to the code matters, especially when building automation, maintaining digital sovereignty, and designing systems that are supposed to last.
+The reason is not that I think writing code is inherently valuable, or that everything important should be implemented by hand. Quite the opposite: I believe strongly in automation and in moving repetitive implementation work out of the way.
+
+**I still write code because technical judgment requires contact with engineering reality.**
+
+## Staying close
+
+It is possible to understand a software system at many levels. You can understand its product, its architecture, its interfaces, its deployment, or the organization around it without knowing every detail of its implementation.
+
+That distance is often useful. Architecture requires abstraction, and technical direction requires looking beyond the problem immediately in front of you.
+
+But distance has a cost.
+
+A clean architecture diagram does not tell you where an abstraction becomes awkward in practice. A specification does not necessarily reveal which existing assumption it violates. A pull request can look perfectly reasonable in isolation while gradually moving a system in the wrong direction.
+
+Writing code occasionally takes me back into that reality.
+
+I encounter the boundary that looked cleaner from above. I discover why an old piece of code is more complicated than I expected. I find that something I wanted to generalize should perhaps remain specific, or that two apparently unrelated problems are symptoms of the same architectural weakness.
+
+Those observations influence decisions much larger than the code I happened to be writing.
 
 ## Close to the automation
 
-I like automation because good automation quietly removes repetitive work. It turns knowledge into something executable and repeatable, and it can make an organization not only faster but also more reliable.
+This is particularly important to me because I like automation.
 
-There is a temptation, however, to treat automation as a black box: something goes in, something useful comes out, and as long as that continues to happen, nobody needs to understand too much about what happens in between.
+Good automation removes repetitive work, makes knowledge executable, and allows people to concentrate on decisions that actually require their attention. Much of my work over the years has been about making systems do more so that people have to do less.
 
-That works until it doesn't.
+But automation also creates distance.
 
-Automation encodes decisions and assumptions about processes, data, responsibilities, and exceptional cases. Over time, those assumptions become part of how an organization operates, often without anyone consciously deciding that they should.
+Once something works reliably enough, we stop thinking about what happens inside it. That is often exactly what we want. Nobody should need to understand an entire technology stack merely to complete an everyday task.
 
-The closer automation gets to important processes, the more important I find it to understand its internals. Writing code keeps me close to that layer and lets me see which decisions we are actually encoding, where complexity accumulates, and which dependencies we introduce.
+The situation changes when we are responsible for the system itself.
 
-The objective is not manual work, but automation we understand.
+Automation encodes assumptions about processes, data, responsibilities, and exceptional cases. Those assumptions gradually become part of how an organization operates, often surviving much longer than anyone originally expected.
 
-## Digital sovereignty is practical
+Being close to the implementation helps me understand what we are actually automating, rather than only what we intended to automate.
 
-Digital sovereignty can sound like a political or abstract concept, but for me it is much more practical. Can we understand the systems we depend on? Can we operate them ourselves? Can we modify them when our requirements change? Can we move them somewhere else?
+The goal is not to do manually what a machine could do for me.
 
-And can we keep them running if a vendor changes direction, disappears, or simply decides that our use case is no longer interesting?
+The goal is to understand enough to remain in control of what the machine does.
 
-These questions become increasingly important as software becomes infrastructure. A system that is convenient today can become a dependency tomorrow, and once enough processes, knowledge, and data accumulate around it, replacing it becomes difficult regardless of what the original procurement decision said.
+## Systems have surprisingly long lives
 
-Open source is an important part of this, but open source alone is not sovereignty. Having access to source code is valuable; having the capability to understand, operate, and change that code is something else.
+Software has a tendency to live longer than expected.
 
-That capability has to exist somewhere.
+django CMS is a good example from my own work. It has evolved through many generations of Python, Django, browsers, deployment practices, contributors, organizations, and ideas about what a content management system should be.
 
-For me, continuing to write code is part of maintaining it.
+a.ix is different, but the underlying design question is similar: what does it mean to build systems that may still matter decades from now?
 
-## Decades change the design problem
+Thinking in decades changes how I look at software.
 
-Many software discussions happen on a surprisingly short timescale. We talk about the next release, the next migration, the next framework, perhaps the next few years.
+The interesting question is no longer whether an architecture is elegant today. It is whether the system can absorb changes we cannot yet predict, whether parts can be replaced without replacing everything, and whether somebody will still be able to understand why important decisions were made.
 
-Some systems live much longer than that.
+Long-lived software does not survive by staying the same.
 
-django CMS has been evolving for many years, across generations of Python, Django, browsers, deployment models, contributors, and organizations. A.IX is also built with the expectation that the systems around it should not simply disappear with the next technology cycle. Technology has vanished, A.IX has not.
-
-Once you start thinking in decades, the design problem changes. It is no longer enough to ask whether something works today. You have to wonder whether someone will understand it ten years from now, whether individual components can be replaced, and whether today's dependencies are quietly determining tomorrow's possibilities.
-
-You also have to accept that you cannot predict what those possibilities will be.
-
-That changes how I think about architecture. Extensibility matters, but so does restraint. Stable interfaces matter. Clear ownership of data matters. Perhaps most importantly, the ability to replace parts of a system without replacing the whole system matters.
+It survives because it can change.
 
 ## Good design compounds
 
-Architecture is often discussed as an upfront investment: spend more time designing something now and development may become easier later. In long-lived systems, I think the effect is stronger than that.
+This is where architecture becomes less theoretical.
+
+A clear boundary might save a little work today, but over many years it can make hundreds of changes easier. A stable interface can allow several generations of implementations to come and go behind it. A deliberately small core reduces the number of assumptions that must survive every technological cycle.
 
 Good design compounds.
 
-A clear boundary makes one change easier, then another, then another. A stable interface allows implementations behind it to be replaced. A deliberately small core reduces the number of assumptions that have to survive every technological generation.
+Bad design compounds too. A convenient shortcut becomes a dependency, the dependency becomes an assumption, and eventually that assumption appears in places nobody anticipated when the original decision was made.
 
-The opposite compounds too. A convenient shortcut becomes a dependency, the dependency becomes an assumption, and the assumption spreads through the system. Years later, changing it requires touching things that appeared completely unrelated when the original decision was made.
+After enough years, the cost of a design decision has remarkably little to do with the amount of code involved.
 
-None of these decisions necessarily look dramatic at the time.
+This is one reason I still want to experience some of those decisions at implementation level. Architecture is not something decided once and subsequently implemented. It emerges through many small decisions made over the lifetime of a system.
 
-Their significance emerges with time.
+You cannot steward a long-lived software system entirely from above.
 
-This is why systems intended to last need restraint. Not every possibility needs an abstraction, not every new technology needs to become part of the foundation, and not every problem requires another layer.
+## Designing for replacement
 
-Often, good architecture is as much about what a system does not know as what it does.
+When building software expected to last, I don't think the objective should be to preserve today's implementation.
 
-## Longevity requires change
+The objective should be to preserve the ability to replace it.
 
-Software that lasts for decades does not survive by staying the same. Operating systems change, databases change, deployment models change, security expectations change, organizations change, and the people maintaining the software certainly change.
+Operating systems change. Databases change. Frameworks change. Infrastructure changes. Organizations change. Requirements change. People certainly change.
 
-Long-lived software survives because it can change.
+Trying to predict all of those changes is futile.
 
-That means designing not to preserve today's implementation, but to preserve the ability to replace it. Those two goals can look similar when a system is young, but over a decade they lead to very different architectures.
+What we can do is design boundaries that limit how far a change propagates. We can be deliberate about ownership of data. We can keep interfaces smaller than their implementations. We can avoid making the core of a system dependent on things that are likely to be temporary.
 
 A stable system is not one in which nothing moves.
 
 It is one in which things can move without everything moving at once.
 
-This is why I care about interfaces, boundaries, modularity, and ownership of data. They are sometimes treated as architectural aesthetics, but their real value is much more practical: they make change affordable.
+That principle matters much more to me today than choosing the supposedly perfect technology for a particular moment.
 
-## Simplicity is operational freedom
+## Digital sovereignty
 
-There is another connection between good design and digital sovereignty that I think is easy to overlook: complexity reduces freedom.
+There is a broader principle behind this that I increasingly think about as digital sovereignty.
 
-Every additional service, dependency, platform, protocol, and abstraction introduces another thing that has to remain available and understood. Sometimes that complexity is absolutely justified, but it has a cost beyond development effort.
+The term is often discussed at the level of governments, cloud providers, regulation, or open-source policy. Those are important conversations, but there is also a very practical version of it.
 
-Complexity narrows the set of people who can understand a system. It increases the number of external decisions that can affect it. It makes migrations harder and independent operation more difficult.
+Can we understand the systems we depend on? Can we operate them? Can we modify them when our requirements change? Can we move them? Can we keep them running when someone else's priorities change?
 
-Simplicity therefore has strategic value.
+Open source helps, but access to source code alone does not create sovereignty.
 
-A system you understand is a system you can change, and a system you can change is a system you have a chance of keeping.
+Capability does.
 
-## Why code?
+An organization that technically possesses the source code to an important system but no longer has the knowledge required to understand or change it is not particularly sovereign.
 
-None of this strictly requires me to write code myself. Architecture can be discussed in diagrams, processes can be documented, and implementation can be delegated.
+The same principle applies at a personal level.
 
-But I don't want architecture to become detached from implementation.
+I don't need to implement everything myself, and I don't want to. But I want to retain the ability to investigate a system, understand the important parts, question its assumptions, and change it when necessary.
 
-Code is where I can test whether an abstraction is actually useful. It is where I discover whether a boundary is clean or merely looks clean in a diagram. It is where the operational consequences of a design decision eventually become concrete.
+Writing code maintains some of that capability.
 
-Sometimes the fastest way to understand a system is still to build (at least a part of) it.
+## Simplicity creates freedom
 
-Writing code keeps that feedback loop short. It keeps me close to the automation and keeps architectural decisions connected to their consequences. Perhaps just as importantly, it maintains my own ability to change the systems I depend on rather than merely consume them.
+This also explains why I increasingly value simplicity.
 
-## Building things we can keep
+Every additional dependency, service, abstraction, platform, and protocol may solve a real problem, but it also introduces another thing we depend on and another piece of knowledge someone has to maintain.
 
-I am less interested today in how quickly software can be built than I once was. Speed matters, of course, and there are plenty of situations where it is the right thing to optimize.
+Complexity therefore has an organizational cost beyond development effort.
 
-For important systems, however, I increasingly find myself asking a different question.
+It reduces the number of people who can understand a system. It increases the number of external decisions that can affect it. It makes replacement harder and independent operation more expensive.
 
-Can we keep this?
+Sometimes that cost is absolutely justified.
 
-Can we understand it, operate it, adapt it, and still make meaningful decisions about it years from now? Can the people who come after us do the same, without having to reconstruct all the assumptions we made along the way?
+But it should be a decision rather than an accident.
 
-That is ultimately what digital sovereignty means to me. It does not mean doing everything yourself, avoiding external technology, or avoiding automation. It means retaining enough knowledge and control to make your own decisions.
+A system you understand is easier to change, and a system you can change is a system you have a chance of keeping.
 
-It means retaining agency.
+## Coding is not the output
 
-Good architecture creates that agency. Open systems create that agency. Knowledge creates that agency.
+This changes what writing code means to me.
 
-And for me, writing code is still part of maintaining it.
+Earlier in my career, code was much more directly the output of my work. A problem needed solving, and I implemented the solution.
+
+Today, the most valuable outcome is often a decision: identifying the actual problem, finding the right boundary, choosing what should remain stable, deciding what should be replaced, or recognizing that something should not be built at all.
+
+Writing code supports those decisions.
+
+Sometimes I implement a small part because I want to test an architectural assumption. Sometimes I need to follow a problem deeply enough to understand where it actually originates. Sometimes building something is simply the fastest way to discover whether an idea survives contact with reality.
+
+The amount of code I produce is therefore becoming less interesting to me.
+
+The quality of the judgment it enables is much more interesting.
+
+## Knowing when to go down a level
+
+Moving toward architecture and technical stewardship does not mean continuously moving further away from implementation.
+
+It means being able to move between levels.
+
+Sometimes the right place to work is the product direction. Sometimes it is the architecture. Sometimes it is an interface or specification. And sometimes the uncertainty cannot be resolved from there, and the right thing to do is to go down another level and look at the code.
+
+Then you come back up with better information.
+
+The further I move from implementation as my primary job, the more deliberate I become about which code I still write.
+
+I don't write code because writing code is the objective.
+
+I write it to stay close enough to the systems I help shape that my decisions remain grounded in how those systems actually work.
+
+For systems that should remain understandable, adaptable, and ours to change for decades, I think that matters.
 
 That is why I still write code.

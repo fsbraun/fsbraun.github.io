@@ -39,16 +39,6 @@ permalink: /about/
       <a class="text-link" href="{{ '/projects/' | relative_url }}">Selected projects&nbsp; →</a>
     </div>
   </article>
-
-  <article class="about-card about-card-wide">
-    <div>
-      <p class="eyebrow">Background</p>
-      <h2>Physics, business &amp; consulting</h2>
-    </div>
-    <div class="about-copy">
-      <p>My background spans physics, business, and management consulting. Those fields taught me to move between models and implementation, and between what appears optimal in theory and what remains useful under real-world constraints.</p>
-    </div>
-  </article>
 </section>
 
 <section class="about-connection">

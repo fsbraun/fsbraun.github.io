@@ -1,9 +1,17 @@
 {% assign category_posts = site.categories[include.category] %}
 {% for post in category_posts %}
+{% if post.external_url %}
+<article class="idea">
+  <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
+  {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  <a class="text-link" href="{{ post.external_url }}">Read on {{ post.external_site | default: "the original site" }}&nbsp; ↗</a>
+</article>
+{% else %}
 <article class="idea idea-published">
   <p class="idea-meta">{{ post.date | date: "%B %-d, %Y" }}{% if post.reading_time %} · {{ post.reading_time }} min read{% endif %}</p>
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   {% if post.description %}<p>{{ post.description }}</p>{% endif %}
   <a class="text-link" href="{{ post.url | relative_url }}">Read the essay&nbsp; →</a>
 </article>
+{% endif %}
 {% endfor %}

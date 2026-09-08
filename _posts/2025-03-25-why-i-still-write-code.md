@@ -55,7 +55,7 @@ Software has a tendency to live longer than expected.
 
 django CMS is a good example from my own work. It has evolved through many generations of Python, Django, browsers, deployment practices, contributors, organizations, and ideas about what a content management system should be.
 
-a.ix is different, but the underlying design question is similar: what does it mean to build systems that may still matter decades from now?
+A.IX is different, but the underlying design question is similar: what does it mean to build systems that may still matter decades from now? When investing is long-term the software also needs to be long-term.
 
 Thinking in decades changes how I look at software.
 
@@ -94,9 +94,7 @@ Trying to predict all of those changes is futile.
 What we can do is design boundaries that limit how far a change propagates. We can be deliberate about ownership of data. We can keep interfaces smaller than their implementations. We can avoid making the core of a system dependent on things that are likely to be temporary.
 
 A stable system is not one in which nothing moves.
-
 It is one in which things can move without everything moving at once.
-
 That principle matters much more to me today than choosing the supposedly perfect technology for a particular moment.
 
 ## Digital sovereignty
@@ -106,7 +104,6 @@ There is a broader principle behind this that I increasingly think about as digi
 The term is often discussed at the level of governments, cloud providers, regulation, or open-source policy. Those are important conversations, but there is also a very practical version of it.
 
 Can we understand the systems we depend on? Can we operate them? Can we modify them when our requirements change? Can we move them? Can we keep them running when someone else's priorities change?
-
 Open source helps, but access to source code alone does not create sovereignty.
 
 Capability does.
@@ -128,9 +125,7 @@ Every additional dependency, service, abstraction, platform, and protocol may so
 Complexity therefore has an organizational cost beyond development effort.
 
 It reduces the number of people who can understand a system. It increases the number of external decisions that can affect it. It makes replacement harder and independent operation more expensive.
-
 Sometimes that cost is absolutely justified.
-
 But it should be a decision rather than an accident.
 
 A system you understand is easier to change, and a system you can change is a system you have a chance of keeping.
@@ -139,8 +134,7 @@ A system you understand is easier to change, and a system you can change is a sy
 
 This changes what writing code means to me.
 
-Earlier in my career, code was much more directly the output of my work. A problem needed solving, and I implemented the solution.
-
+Earlier in my career, code was much more directly the occasional output of my work. A problem needed solving, and I implemented the solution.
 Today, the most valuable outcome is often a decision: identifying the actual problem, finding the right boundary, choosing what should remain stable, deciding what should be replaced, or recognizing that something should not be built at all.
 
 Writing code supports those decisions.

@@ -21,21 +21,6 @@ permalink: /writing/
   <div class="idea-list">
     {% include category-posts.html category="content-systems" %}
     <article class="idea">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">The CMS Is Not the Application</a></h3>
-      <p>Where the boundary between application and content system belongs.</p>
-      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/">Read on django-cms.org&nbsp; ↗</a>
-    </article>
-    <article class="idea">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Make Your Django Application Editable</a></h3>
-      <p>Adding editorial capabilities without surrendering application architecture.</p>
-      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Read on django-cms.org&nbsp; ↗</a>
-    </article>
-    <article class="idea">
-      <h3><a href="https://www.django-cms.org/resources/blog/2026/09/07/plugin-architecture-is-editor-experience/">Plugin Architecture Is Editor Experience</a></h3>
-      <p>How technical component architecture becomes product design.</p>
-      <a class="text-link" href="https://www.django-cms.org/resources/blog/2026/09/07/plugin-architecture-is-editor-experience/">Read on django-cms.org&nbsp; ↗</a>
-    </article>
-    <article class="idea">
       <h3>Headless Is an Architecture, Not a Product Strategy</h3>
       <p>Why a delivery pattern cannot answer the product questions on its own.</p>
       <span class="status">On the horizon</span>

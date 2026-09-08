@@ -45,7 +45,23 @@ Essay text starts here.
 
 The post is added automatically to its category on the Writing page. Supported category values are `content-systems`, `software-reuse`, `automation-ai`, and `decision-systems`.
 
-The date in the filename controls publication: a future-dated file stays hidden until that date. External articles and planned ideas remain curated directly in `writing.md`.
+For an article published on another site, create the same dated file with front matter only:
+
+```md
+---
+layout: post
+title: The CMS Is Not the Application
+description: Where the boundary between application and content system belongs.
+category: content-systems
+external_url: https://example.com/the-cms-is-not-the-application/
+external_site: example.com
+sitemap: false
+---
+```
+
+The Writing page links directly to `external_url` and labels the link with `external_site`. Keeping `sitemap: false` prevents the empty local placeholder page from appearing in the sitemap.
+
+The date in the filename controls publication: a future-dated file stays hidden until that date. Planned ideas remain curated directly in `writing.md`.
 
 ## Preview locally (optional)
 

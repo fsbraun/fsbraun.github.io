@@ -16,7 +16,8 @@ repos:
     hooks:
       - id: jekyll-build
         name: Build Jekyll site
-        entry: bundle exec jekyll build --trace
-        language: system
+        entry: jekyll build --trace
+        language: ruby
+        additional_dependencies: [github-pages:231]
         pass_filenames: false
         always_run: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why I Still Write Code
-description: On staying close to automation, retaining digital sovereignty, and designing software that can evolve for decades.
+description: Why writing code still matters to me when building automation and systems meant to last.
 reading_time: 5
 category: software-reuse
 ---

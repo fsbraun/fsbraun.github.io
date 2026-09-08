@@ -16,7 +16,7 @@ repos:
     hooks:
       - id: jekyll-build
         name: Build Jekyll site
-        entry: env JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build --trace
+        entry: env JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build --strict_front_matter --trace
         language: ruby
         language_version: 3.2.2
         additional_dependencies: [github-pages:231]

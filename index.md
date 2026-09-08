@@ -16,8 +16,8 @@ description: Fabian Braun builds systems for making better decisions in systemat
   <aside class="hero-context" aria-label="Areas of focus">
     <p class="hero-context-lede">My work starts where a system must stay useful as conditions change.</p>
     <ol>
-      <li><span>01</span> Systematic investing</li>
-      <li><span>02</span> Content architecture</li>
+      <li><span>01</span> <a href="https://www.aix-capital.com/">Systematic investing</a></li>
+      <li><span>02</span> <a href="{{ '/projects/' | relative_url }}">Content architecture</a></li>
       <li><span>03</span> Automation &amp; human judgment</li>
     </ol>
   </aside>

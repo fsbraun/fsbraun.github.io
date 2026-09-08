@@ -1,12 +1,15 @@
 title: Fabian Braun
 description: Systems for making better decisions — in investing, software, and content architecture.
-url: ""
+url: "https://fsbraun.github.io"
 baseurl: ""
 lang: en
 timezone: Europe/Berlin
 
 permalink: /writing/:title/
 markdown: kramdown
+
+plugins:
+  - jekyll-sitemap
 
 author:
   name: Fabian Braun
@@ -17,4 +20,3 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
-

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EUMEL · Browser console</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <header><div><p class="eyebrow">EUMEL 1.8.7 / M+</p><h1>Browser console</h1></div><span class="badge">80 × 24</span></header>
+  <p class="intro">The EUMEL0 machine, running locally in your browser. Your Hintergrund stays on this device.</p>
+  <nav aria-label="Machine controls">
+    <button id="start" class="primary">Start / resume</button>
+    <button id="sv" disabled>SV · F2</button>
+    <button id="save" disabled>Save fixpoint</button>
+    <button id="stop" disabled>Save & stop</button>
+    <button id="download" disabled>Stop & download HG</button>
+  </nav>
+  <div class="screen-wrap"><pre id="terminal" tabindex="0" role="textbox" aria-multiline="true" aria-label="EUMEL terminal, 80 columns and 24 rows" spellcheck="false"></pre></div>
+  <div class="status"><span id="status" role="status">Ready. Start downloads a clean HG only when no saved session exists.</span><span id="saved"></span></div>
+  <p class="keys">Click the console to type. <kbd>F2</kbd> supervisor · <kbd>Esc</kbd> then <kbd>?</kbd> help · Arrow keys move the cursor. Paste supports CP437 text.</p>
+  <section class="storage"><div><strong>Saved on this browser</strong><p id="storage">EUMEL schedules its own fixpoints every 15 minutes. Use Save & stop before closing the page.</p><p>Keep an HG download as a backup. Clearing site data removes the browser copy.</p></div><button id="reset">Discard session</button></section>
+  <details><summary>Error console</summary><pre id="errors" aria-live="polite"></pre></details>
+  <p class="intro"><a href="https://6xq.net/eumel/" target="_blank" rel="noopener noreferrer" style="color: inherit">Learn more about EUMEL ↗</a></p>
+</main>
+<script>
+if (location.protocol === 'file:') {
+  document.getElementById('status').textContent = 'Open http://127.0.0.1:8080/ — browser modules and storage need a web server. Run make -C web serve from the project directory.';
+  for (const button of document.querySelectorAll('button')) button.disabled = true;
+} else {
+  const script = document.createElement('script'); script.type = 'module'; script.src = 'app.mjs'; document.body.append(script);
+}
+</script>
+</html>

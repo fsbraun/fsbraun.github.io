@@ -12,7 +12,7 @@ button { background: #23372d; color: #edf5ef; border: 1px solid #3a5445; padding
 button:hover:not(:disabled) { background: #345441; }
 button.primary { background: #b8dfba; color: #122618; border-color: #b8dfba; }
 button:disabled { opacity: .4; cursor: default; }
-.screen-wrap { overflow-x: auto; background: #080f0a;; }
+.screen-wrap { overflow-x: auto; background: #080f0a; padding: 1em; }
 #terminal { width: 80ch; height: 24em; margin: 0 auto; font: 20px/1 "DejaVu Sans Mono", "Liberation Mono", Consolas, monospace; color: #bae6b2; white-space: pre; outline: none; user-select: text; }
 #terminal:focus { outline: 1px solid #36583b; outline-offset: 6px; }
 .reverse { color: #080f0a; background: #bae6b2; }

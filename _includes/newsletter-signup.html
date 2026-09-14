@@ -1,8 +1,13 @@
-<section id="newsletter" class="newsletter-signup" aria-labelledby="newsletter-heading">
+<section id="newsletter" class="newsletter-signup{% if include.variant == 'compact' %} newsletter-signup--compact{% endif %}" aria-labelledby="newsletter-heading">
   <div class="newsletter-signup-copy">
+    {% if include.variant == "compact" %}
+    <p id="newsletter-heading" class="hero-context-lede">New substantial writing, occasionally.</p>
+    <p>Software, systems, and decision-making.</p>
+    {% else %}
     <p class="eyebrow">Occasional notes</p>
     <h2 id="newsletter-heading">New substantial writing, occasionally.</h2>
     <p>Notes on software, systems, and decision-making—usually one or two substantial pieces a month. No weekly roundup.</p>
+    {% endif %}
   </div>
   <form
     class="newsletter-signup-form"

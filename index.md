@@ -13,13 +13,14 @@ description: Fabian Braun builds systems for making better decisions in systemat
       <a class="button" href="{{ '/about/' | relative_url }}">More about my work&nbsp; →</a>
     </div>
   </div>
-  <aside class="hero-context" aria-label="Areas of focus">
+  <aside class="hero-context" aria-label="Areas of focus and email updates">
     <p class="hero-context-lede">My work starts where a system must stay useful as conditions change.</p>
     <ol>
       <li><span>01</span> <a href="https://www.aix-capital.com/">Systematic investing</a></li>
       <li><span>02</span> <a href="{{ '/projects/' | relative_url }}">Content architecture</a></li>
       <li><span>03</span> Automation &amp; human judgment</li>
     </ol>
+    {% include newsletter-signup.html variant="compact" %}
   </aside>
 </section>
 
@@ -53,8 +54,6 @@ description: Fabian Braun builds systems for making better decisions in systemat
   </div>
   <a class="section-link" href="{{ '/writing/' | relative_url }}">Explore all writing&nbsp; →</a>
 </section>
-
-{% include newsletter-signup.html %}
 
 <section class="section" aria-label="Fields of work">
   <div class="section-heading">

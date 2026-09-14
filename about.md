@@ -63,3 +63,5 @@ permalink: /about/
     <li>Editor-centered component architecture</li>
   </ul>
 </section>
+
+{% include newsletter-signup.html %}

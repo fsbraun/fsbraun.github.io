@@ -92,3 +92,5 @@ permalink: /projects/
     </div>
   </div>
 </section>
+
+{% include newsletter-signup.html %}

@@ -520,6 +520,47 @@ h3 {
   line-height: 1.5;
 }
 
+.newsletter-signup--compact {
+  display: block;
+  margin-top: 2rem;
+  padding: 2rem 0 0;
+}
+
+.newsletter-signup--compact .newsletter-signup-copy h2 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  line-height: 1.08;
+}
+
+.newsletter-signup--compact .newsletter-signup-copy > p:last-child {
+  margin-bottom: 1.35rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.newsletter-signup--compact .newsletter-signup-controls {
+  align-items: stretch;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+.newsletter-signup--compact .newsletter-signup-form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.newsletter-signup--compact .newsletter-signup-controls .button {
+  width: auto;
+  flex: 0 0 auto;
+}
+
 .status {
   white-space: nowrap;
   padding: 0.25rem 0.48rem;
@@ -924,6 +965,19 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .hero-context > .newsletter-signup--compact {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: 2rem;
+    align-items: end;
+    margin-top: 0;
+  }
+
+  .hero-context > .newsletter-signup--compact .newsletter-signup-copy > p:last-child {
+    margin-bottom: 0;
+  }
+
   .writing-list,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -967,6 +1021,7 @@ h3 {
   .section-heading,
   .page-heading,
   .category-section,
+  .hero,
   .newsletter-signup,
   .about-card-wide,
   .about-connection,

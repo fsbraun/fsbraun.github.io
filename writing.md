@@ -70,3 +70,5 @@ permalink: /writing/
     </article>
   </div>
 </section>
+
+{% include newsletter-signup.html %}

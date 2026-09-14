@@ -15,6 +15,9 @@ author:
   name: Fabian Braun
   github: fsbraun
 
+newsletter:
+  username: fsbraun
+
 exclude:
   - Gemfile
   - Gemfile.lock

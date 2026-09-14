@@ -51,7 +51,8 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible {
   outline: 3px solid rgba(22, 94, 168, 0.28);
   outline-offset: 4px;
 }
@@ -447,6 +448,76 @@ h3 {
   font-size: 0.88rem;
   font-weight: 720;
   text-decoration: none;
+}
+
+.newsletter-signup {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: center;
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  border-top: 1px solid var(--line);
+}
+
+.newsletter-signup-copy h2 {
+  max-width: 650px;
+  margin-bottom: 1rem;
+  color: var(--navy);
+  font-size: clamp(2.1rem, 4vw, 3.75rem);
+  line-height: 1.02;
+}
+
+.newsletter-signup-copy > p:last-child {
+  max-width: 640px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.newsletter-signup-form label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.newsletter-signup-controls {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.newsletter-signup-controls input {
+  min-width: 0;
+  flex: 1;
+  min-height: 50px;
+  padding: 0.72rem 1rem;
+  border: 1px solid #b9cee5;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--navy);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.newsletter-signup-controls input::placeholder {
+  color: #7a899b;
+}
+
+.newsletter-signup-controls input:focus {
+  border-color: var(--accent);
+}
+
+.newsletter-signup-controls .button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.newsletter-signup-note {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
 .status {
@@ -896,6 +967,7 @@ h3 {
   .section-heading,
   .page-heading,
   .category-section,
+  .newsletter-signup,
   .about-card-wide,
   .about-connection,
   .about-now {
@@ -962,6 +1034,15 @@ h3 {
     flex-direction: column;
     justify-content: center;
     gap: 0.8rem;
+  }
+
+  .newsletter-signup-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .newsletter-signup-controls .button {
+    width: 100%;
   }
 }
 

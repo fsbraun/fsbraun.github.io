@@ -1,0 +1,31 @@
+<section id="newsletter" class="newsletter-signup" aria-labelledby="newsletter-heading">
+  <div class="newsletter-signup-copy">
+    <p class="eyebrow">Occasional notes</p>
+    <h2 id="newsletter-heading">New substantial writing, occasionally.</h2>
+    <p>Notes on software, systems, and decision-making—usually one or two substantial pieces a month. No weekly roundup.</p>
+  </div>
+  <form
+    class="newsletter-signup-form"
+    action="https://buttondown.com/api/emails/embed-subscribe/{{ site.newsletter.username }}"
+    method="post"
+  >
+    <label for="newsletter-email">Email address</label>
+    <div class="newsletter-signup-controls">
+      <input
+        id="newsletter-email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        aria-describedby="newsletter-note"
+        placeholder="you@example.com"
+        required
+      >
+      <button class="button primary" type="submit">Subscribe</button>
+    </div>
+    <input type="hidden" name="embed" value="1">
+    <p id="newsletter-note" class="newsletter-signup-note">
+      Double opt-in. Unsubscribe at any time.
+      <a href="{{ '/privacy/' | relative_url }}">How your data is handled.</a>
+    </p>
+  </form>
+</section>

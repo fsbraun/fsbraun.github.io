@@ -7,7 +7,7 @@ description: Fabian Braun builds systems for making better decisions in systemat
   <div class="hero-main">
     <p class="eyebrow">Fabian Braun · Düsseldorf</p>
     <h1>I build systems for making <span>better decisions.</span></h1>
-    <p class="hero-intro">I’m founder and managing director of A.IX Capital, where I work on systematic investing and automated investment processes. I’m also a long-standing open-source developer and steward of django CMS.</p>
+    <p class="hero-intro">I’m founder and managing director of A.IX Capital, where I work on systematic investing and automated investment processes, and a long-standing open-source developer and steward of django CMS.</p>
     <div class="actions">
       <a class="button primary" href="https://www.aix-capital.com/">A.IX Capital&nbsp; ↗</a>
       <a class="button" href="{{ '/about/' | relative_url }}">More about my work&nbsp; →</a>
@@ -53,6 +53,8 @@ description: Fabian Braun builds systems for making better decisions in systemat
   </div>
   <a class="section-link" href="{{ '/writing/' | relative_url }}">Explore all writing&nbsp; →</a>
 </section>
+
+{% include newsletter-signup.html %}
 
 <section class="section" aria-label="Fields of work">
   <div class="section-heading">

@@ -7,7 +7,6 @@ category: software-reuse
 related_reads:
   - the-cms-is-not-the-application
   - make-your-django-application-editable
-  - why-i-still-write-code
 ---
 Agencies build different websites for different clients, but they don't always build different applications. One corporate website needs people, another needs locations, another needs events. Others need services, jobs, case studies, publications, or projects.
 

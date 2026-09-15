@@ -4,9 +4,6 @@ title: Why I Still Write Code
 description: Why writing code still matters to me when building automation and systems meant to last.
 reading_time: 10
 category: software-reuse
-related_reads:
-  - stop-rebuilding-apps
-  - plugin-architecture-is-editor-experience
 ---
 I have been writing software for a long time, and my role has changed considerably along the way. I spend more time today thinking about architecture, product direction, automation, and the long-term consequences of technical decisions than about implementing individual features.
 

@@ -930,6 +930,39 @@ h3 {
   font-size: 0.88em;
 }
 
+.related-reads {
+  max-width: 800px;
+  margin: 3.5rem auto 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.related-reads h2 {
+  margin-bottom: 1.2rem;
+  color: var(--navy);
+  font-size: 1.75rem;
+}
+
+.related-reads ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-reads li + li {
+  margin-top: 0.85rem;
+}
+
+.related-reads a {
+  color: var(--accent-strong);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.related-reads a:hover {
+  text-decoration: underline;
+}
+
 .site-footer {
   min-height: 140px;
   display: flex;

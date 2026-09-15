@@ -11,6 +11,25 @@ layout: default
   <div class="prose">
     {{ content }}
   </div>
+  {% if page.related_reads %}
+  <section class="related-reads" aria-labelledby="related-reads-heading">
+    <h2 id="related-reads-heading">Further reading</h2>
+    <ul>
+      {% for slug in page.related_reads %}
+        {% assign related = site.posts | where: "slug", slug | first %}
+        {% if related and related.slug != page.slug %}
+      <li>
+        {% if related.external_url %}
+        <a href="{{ related.external_url }}">{{ related.title }} <span aria-hidden="true">↗</span></a>
+        {% else %}
+        <a href="{{ related.url | relative_url }}">{{ related.title }} <span aria-hidden="true">→</span></a>
+        {% endif %}
+      </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 </article>
 
 {% include newsletter-signup.html %}

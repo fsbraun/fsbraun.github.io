@@ -1053,6 +1053,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .hero-context > .newsletter-signup--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-context > .newsletter-signup--compact .newsletter-signup-controls {
+    flex-direction: column;
+  }
+
+  .hero-context > .newsletter-signup--compact .newsletter-signup-controls .button {
+    width: 100%;
+  }
+
   .writing-item,
   .writing-item-featured {
     grid-column: auto;

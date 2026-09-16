@@ -1,16 +1,121 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
+    {% assign meta_description = page.description | default: site.description %}
+    {% if page.canonical_url %}
+      {% assign canonical_url = page.canonical_url %}
+    {% elsif page.external_url %}
+      {% assign canonical_url = page.external_url %}
+    {% else %}
+      {% assign canonical_url = page.url | absolute_url %}
+    {% endif %}
+    {% assign social_image_path = page.image | default: site.social_image %}
+    {% if social_image_path contains '://' %}
+      {% assign social_image_url = social_image_path %}
+    {% else %}
+      {% assign social_image_url = social_image_path | absolute_url %}
+    {% endif %}
+    {% assign social_image_alt = page.image_alt | default: site.social_image_alt %}
+    {% assign author_url = site.author.url | default: site.url %}
+    {% assign person_id = '/#person' | absolute_url %}
+    {% assign website_id = '/#website' | absolute_url %}
+    {% assign modified_date = page.last_modified_at | default: page.date %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <meta name="description" content="{{ meta_description | escape }}">
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots | escape }}">
+    {% elsif page.external_url %}
+    <meta name="robots" content="noindex, follow">
+    {% endif %}
     <meta name="theme-color" content="#f4f7fb">
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}">
-    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:description" content="{{ meta_description | escape }}">
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta property="og:url" content="{{ canonical_url | escape }}">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:image" content="{{ social_image_url | escape }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ social_image_alt | escape }}">
+    {% if page.layout == 'post' and page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ modified_date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ author_url | escape }}">
+    <meta property="article:section" content="{{ page.category | escape }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | escape }}">
+    <meta name="twitter:image" content="{{ social_image_url | escape }}">
+    <meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
+    <link rel="canonical" href="{{ canonical_url | escape }}">
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
     <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": {{ person_id | jsonify }},
+            "name": {{ site.author.name | jsonify }},
+            "url": {{ author_url | jsonify }},
+            "sameAs": [
+              {{ site.author.github | prepend: 'https://github.com/' | jsonify }}
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": {{ website_id | jsonify }},
+            "url": {{ '/' | absolute_url | jsonify }},
+            "name": {{ site.title | jsonify }},
+            "description": {{ site.description | jsonify }},
+            "inLanguage": {{ site.lang | default: 'en' | jsonify }},
+            "publisher": { "@id": {{ person_id | jsonify }} }
+          },
+          {% if page.layout == 'post' and page.external_url == nil %}
+          {
+            "@type": "Article",
+            "@id": {{ canonical_url | append: '#article' | jsonify }},
+            "headline": {{ page.title | jsonify }},
+            "description": {{ meta_description | jsonify }},
+            "articleSection": {{ page.category | jsonify }},
+            "url": {{ canonical_url | jsonify }},
+            "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+            "dateModified": {{ modified_date | date_to_xmlschema | jsonify }},
+            "inLanguage": {{ site.lang | default: 'en' | jsonify }},
+            "image": {
+              "@type": "ImageObject",
+              "url": {{ social_image_url | jsonify }},
+              "width": 1200,
+              "height": 630
+            },
+            "author": { "@id": {{ person_id | jsonify }} },
+            "publisher": { "@id": {{ person_id | jsonify }} },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": {{ canonical_url | jsonify }}
+            },
+            "isPartOf": { "@id": {{ website_id | jsonify }} }
+          }
+          {% else %}
+          {
+            "@type": "WebPage",
+            "@id": {{ canonical_url | jsonify }},
+            "url": {{ canonical_url | jsonify }},
+            "name": {% if page.title %}{{ page.title | append: ' · ' | append: site.title | jsonify }}{% else %}{{ site.title | jsonify }}{% endif %},
+            "description": {{ meta_description | jsonify }},
+            "inLanguage": {{ site.lang | default: 'en' | jsonify }},
+            "isPartOf": { "@id": {{ website_id | jsonify }} },
+            "about": { "@id": {{ person_id | jsonify }} }
+          }
+          {% endif %}
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>

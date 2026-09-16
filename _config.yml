@@ -4,6 +4,8 @@ url: "https://www.fabian-braun.de"
 baseurl: ""
 lang: en
 timezone: Europe/Berlin
+social_image: /assets/social-card.png
+social_image_alt: Abstract systems diagram with the name Fabian Braun.
 
 permalink: /writing/:title/
 markdown: kramdown
@@ -13,6 +15,7 @@ plugins:
 
 author:
   name: Fabian Braun
+  url: "https://www.fabian-braun.de/"
   github: fsbraun
 
 newsletter:

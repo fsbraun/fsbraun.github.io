@@ -51,7 +51,7 @@ AI doing mathematics complicates that picture because it isn't merely executing 
 
 That suggests a progression:
 
-```text id="hbrj89"
+```
 execution
     ↓
 search for solutions

@@ -70,7 +70,7 @@ people/
 
 It can define what a `Person` is, relationships between people, departments and locations, APIs, permissions, and business logic. None of this needs to belong to the CMS.
 
-This is the same distinction I argued for in [The CMS Is Not the Application](ref:djangocms_stories.post:636):
+This is the same distinction I argued for in [The CMS Is Not the Application](https://www.django-cms.org/resources/blog/2026/08/24/the-cms-is-not-the-application/):
 
 > **The application should own the architecture. The CMS should make it editable.**
 

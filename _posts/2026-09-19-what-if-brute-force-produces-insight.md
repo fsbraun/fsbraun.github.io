@@ -4,6 +4,8 @@ title: What If Brute Force Produces Insight?
 description: AI, mathematical discovery, and what remains when searching for answers becomes cheap.
 reading_time: 8
 category: automation-ai
+related_reads:
+  - open-source-is-dying-again
 ---
 OpenAI recently reported that a system involving on the order of 10,000 concurrent AI agents produced a proposed resolution of the Navier–Stokes Millennium Prize Problem. According to [OpenAI's account of the experiment](https://openai.com/index/navier-stokes-solution/), the effort took about 88 hours, involved 2.7 million agent messages and roughly 130 billion output tokens, followed by another 17 hours of Lean formalization and verification.
 

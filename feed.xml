@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.lang | default: 'en' }}">
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ '/' | absolute_url }}" rel="alternate" type="text/html"/>
+  <id>{{ '/' | absolute_url }}</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ site.author.name | xml_escape }}</name>
+    <uri>{{ site.author.url | default: site.url }}</uri>
+  </author>
+  {% for post in site.posts limit: 20 %}
+  {% assign updated = post.last_modified_at | default: post.date %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    {% if post.external_url %}
+    <link href="{{ post.external_url | xml_escape }}" rel="alternate" type="text/html"/>
+    {% else %}
+    <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html"/>
+    {% endif %}
+    <id>{{ post.url | absolute_url }}</id>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ updated | date_to_xmlschema }}</updated>
+    {% if post.category %}<category term="{{ post.category | xml_escape }}"/>{% endif %}
+    <summary>{{ post.description | strip_html | xml_escape }}</summary>
+    {% if post.external_url %}
+    <content type="html">{{ post.description | append: '</p><p><a href="' | append: post.external_url | append: '">Read on ' | append: post.external_site | append: ' ↗</a></p>' | prepend: '<p>' | xml_escape }}</content>
+    {% else %}
+    <content type="html" xml:base="{{ post.url | absolute_url }}">{{ post.content | xml_escape }}</content>
+    {% endif %}
+  </entry>
+  {% endfor %}
+</feed>

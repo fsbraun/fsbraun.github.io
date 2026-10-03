@@ -51,11 +51,6 @@ permalink: /writing/
       <p>Why useful automation belongs in workflows and capabilities, not novelty controls.</p>
       <span class="status">On the horizon</span>
     </article>
-    <article class="idea">
-      <h3>AI Doesn’t Replace Engineering. It Moves It Up the Stack.</h3>
-      <p>How agentic tools change the level at which engineers specify, evaluate, and maintain systems.</p>
-      <span class="status">On the horizon</span>
-    </article>
   </div>
 </section>
 

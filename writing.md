@@ -14,6 +14,7 @@ permalink: /writing/
     </div>
     <p class="lede">Essays and notes organized around ideas rather than publication dates. Published work sits alongside questions and pieces still in development.</p>
   </div>
+  <a class="section-link" href="{{ '/writing/archive/' | relative_url }}">Browse the archive by date&nbsp; →</a>
 </header>
 
 <section class="category-section">

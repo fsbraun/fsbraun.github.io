@@ -52,7 +52,10 @@ description: Fabian Braun builds systems for making better decisions in systemat
       <a class="article-link" href="https://www.django-cms.org/resources/blog/2026/08/31/make-your-django-application-editable/">Read the essay <span aria-hidden="true">↗</span></a>
     </article>
   </div>
-  <a class="section-link" href="{{ '/writing/' | relative_url }}">Explore all writing&nbsp; →</a>
+  <div class="actions">
+    <a class="section-link" href="{{ '/writing/' | relative_url }}">Explore all writing&nbsp; →</a>
+    <a class="section-link" href="{{ '/writing/archive/' | relative_url }}">Browse the archive&nbsp; →</a>
+  </div>
 </section>
 
 <section class="section" aria-label="Fields of work">

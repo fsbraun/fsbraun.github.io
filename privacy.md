@@ -10,7 +10,7 @@ permalink: /privacy/
     <p class="eyebrow">Legal</p>
     <h1>Privacy notice</h1>
     <p class="lede">This notice explains what personal data is processed when you visit this website or subscribe to the occasional email newsletter.</p>
-    <p class="article-meta">Last updated 14 September 2026</p>
+    <p class="article-meta">Last updated 12 October 2026</p>
   </header>
 
   <div class="prose">
@@ -56,7 +56,13 @@ permalink: /privacy/
 
     <h2>Cookies and analytics</h2>
 
-    <p>This website does not set cookies and does not use website analytics, advertising technology, externally hosted fonts, or embedded third-party media. The newsletter form sends data to Buttondown only when you submit it.</p>
+    <p>This website does not set cookies and does not use advertising technology, externally hosted fonts, or embedded third-party media. The newsletter form sends data to Buttondown only when you submit it.</p>
+
+    <p>To see which articles are read and where readers come from, this website counts page views with <a href="https://www.goatcounter.com/">GoatCounter</a>, a privacy-friendly analytics service. When a page loads, a small script sends the page address, the referring page or campaign tag of the link you followed (such as <code>?ref=mastodon</code>), your browser and operating system, language, screen width and an approximate location derived from your IP address. GoatCounter stores only aggregated counts. It does not store your IP address, the full browser identification or any tracking ID, and it does not store anything in your browser (no cookies, no local storage). To avoid counting a visitor twice, it keeps a random session ID in memory for up to eight hours. It is not used to identify you or to follow you across websites.</p>
+
+    <p>GoatCounter is operated by Martin Tournoij, Ireland. The data is stored on servers of Hetzner Online GmbH in Finland and Germany, so it stays in the EU. Further information is available in <a href="https://www.goatcounter.com/help/privacy">GoatCounter's privacy policy</a>.</p>
+
+    <p>The legal basis is Article 6(1)(f) GDPR. The legitimate interest is understanding which content is useful and which channels readers use. I can delete the collected counts at any time; deleted data may remain in GoatCounter's backups for up to 30 days.</p>
 
     <h2>Your rights</h2>
 
